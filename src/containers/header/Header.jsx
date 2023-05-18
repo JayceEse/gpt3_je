@@ -6,7 +6,12 @@ import "./header.css";
 
 const Header = () => (
   <div className="gpt3__header section__padding" id="home">
-    <div className="gpt3__header-content">
+    <motion.div
+      className="gpt3__header-content"
+      initial={{ opacity: 0, translateX: -50 }}
+      animate={{ opacity: 1, translateX: 0 }}
+      transition={{ type: "tween", duration: 1 }}
+    >
       <h1 className="gradient__text">
         Let&apos;s Build Something amazing with GPT-3 OpenAI
       </h1>
@@ -16,16 +21,26 @@ const Header = () => (
         boisterous the attachment. Party we years to order allow asked of.
       </p>
 
-      <div className="gpt3__header-content__input">
+      <motion.div
+        className="gpt3__header-content__input"
+        initial={{ opacity: 0, translateX: -50 }}
+        animate={{ opacity: 1, translateX: 0 }}
+        transition={{ type: "tween", duration: 1, delay: 0.2 }}
+      >
         <input type="email" placeholder="Your Email Address" />
         <button type="button">Get Started</button>
-      </div>
+      </motion.div>
 
-      <div className="gpt3__header-content__people">
+      <motion.div
+        className="gpt3__header-content__people"
+        initial={{ opacity: 0, translateX: -50 }}
+        animate={{ opacity: 1, translateX: 0 }}
+        transition={{ type: "tween", duration: 1, delay: 0.4 }}
+      >
         <img src={people} alt="people" />
         <p>1,600 people requested access a visit in last 24 hours</p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
 
     <motion.div
       initial={{ y: 25, opacity: 1 }}

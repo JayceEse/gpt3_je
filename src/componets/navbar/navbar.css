@@ -40,20 +40,37 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 25px;
-  padding: 0 2px;
+  padding: 0.4rem 1rem;
 
   margin: 0 1rem;
   cursor: pointer;
 }
 
-.gpt3__navbar-links_container p:hover {
-  background: var(--gradient-text);
+.gpt3__navbar-sign p:hover {
+  background-color: var(--color-text);
   border-radius: 5px;
+  scale: 1.1;
 }
 
-.gpt3__navbar-sign p:hover {
-  background: var(--gradient-text);
-  border-radius: 5px;
+.menu_link {
+  position: relative;
+}
+
+.menu_link::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: var(--color-text);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  opacity: 0;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+
+.menu_link:hover::after {
+  opacity: 1;
 }
 
 .gpt3__navbar-sign button,
